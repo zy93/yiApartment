@@ -1,0 +1,49 @@
+//
+//  CYPA-Prefix.pch
+//  CYPA
+//
+//  Created by HDD on 16/7/27.
+//  Copyright © 2016年 HDD. All rights reserved.
+//
+
+#ifndef CYPA_Prefix_pch
+#define CYPA_Prefix_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* CYPA_Prefix_pch */
+
+#define kScreen_Width       [UIScreen mainScreen].bounds.size.width
+#define kScreen_Height      [UIScreen mainScreen].bounds.size.height
+
+//NSLog的重新定义
+#define NSLog(...) printf("%f %s\n",[[NSDate date]timeIntervalSince1970],[[NSString stringWithFormat:__VA_ARGS__]UTF8String]);
+
+//#define BaseURL @"http://123.57.156.227:8088/odm/app"
+//#define BaseImageURL @"http://123.57.156.227:8088/AppImages/"
+
+#define BaseURL @"http://123.56.66.70:8088/odm/app"
+#define BaseImageURL @"http://123.56.66.70:8088/AppImages/"
+#define WOTURL @"http://www.e-harbour.net/"
+#define WOTWebsocketURL @"ws://moblie.e-harbour.net:8999/IotHarborWebsocket"
+
+
+#define kButtonBGColor           @"fc4d01"
+#define kTextNormarlColor       @"#666666"
+
+#define strIsEmpty(str) (str == nil || [str length]<1 ? YES : NO )
+
+
+#import "MBProgressHUD.h"
+#import "MBProgressHUD+Add.h"
+
+//基本控件类目
+#import "UIView+AdjustFrame.h"
+#import "UIColor+HexColor.h"
+#import "UIBarButtonItem+Item.h"
+#import "UIImage+Image.h"
+#import "UILabel+Label.h"
+#import "UIButton+ZTButton.h"
+
+
